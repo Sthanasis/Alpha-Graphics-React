@@ -13,6 +13,7 @@
   color: var(--MainText);
 }
 
+.NavigationItem a:hover,
 .NavigationItem a.active {
   color: var(--LightColor);
 }
