@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"),
+    url(../../assets/fonts/Gilroy-ExtraBold.otf) format("opentype");
+}
+
+.Logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* font-family: "Gilroy-Bold" !important; */
+  -webkit-animation: slideIn 2s ease-in-out;
+  animation: slideIn 2s ease-in-out;
+  transition: 2s;
+}
+
+.LogoFooter {
+  text-transform: capitalize;
+  font-size: var(--fontSizeL);
+  color: var(--LightColor);
+  position: absolute;
+  letter-spacing: 0.4rem;
+  margin-top: -8rem;
+  margin-left: 15rem;
+}
+
+.Fade-in {
+  animation: fadeIn ease-out 2s;
+  -webkit-animation: fadeIn ease-out 2s;
+  -moz-animation: fadeIn ease-out 2s;
+  -o-animation: fadeIn ease-out 2s;
+  -ms-animation: fadeIn ease-out 2s;
+  opacity: 1 !important;
+}
+
+.Fade-out {
+  animation: fadeOut ease-out 2s;
+  -webkit-animation: fadeOut ease-out 2s;
+  -moz-animation: fadeOut ease-out 2s;
+  -o-animation: fadeOut ease-out 2s;
+  -ms-animation: fadeOut ease-out 2s;
+  opacity: 0;
+}
+
+.ArtistName {
+  opacity: 0;
+  font-family: "Gilroy-Bold";
+}
+
+.name {
+  font-size: var(--fontSizeL);
+}
+
+.artistName {
+  letter-spacing: 1px;
+}
+
+.center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.firstName,
+.lastName {
+  padding: 0 0.2em;
+  text-transform: uppercase;
+}
+
+.description {
+  color: var(--DarkColor);
+  font-size: var(--fontSizeM);
+  text-transform: uppercase;
+  padding: 0.5rem;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.redColor {
+  color: var(--RedColor);
+}
+.blueColor {
+  color: var(--LightColor);
+}
+
+.separator {
+  color: var(--MainText);
+  font-weight: bold;
+  margin: 0px 0.5em;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    left: 30%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    left: 30%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}

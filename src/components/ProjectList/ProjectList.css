@@ -1,0 +1,21 @@
+.ListHeader {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-family: "Gilroy-Bold";
+}
+
+.project {
+  background-position-x: 20vw;
+  min-height: 60vh;
+  margin-top: 9rem;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 30vw;
+  background-position-y: 30vh;
+  background-image: url(../../assets/img/project-Spiderman.jpeg);
+}
+
+.project:nth-of-type(2) {
+  background-position-x: 50vw;
+}

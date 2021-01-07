@@ -1,0 +1,15 @@
+.Social {
+  display: flex;
+  justify-content: center;
+}
+
+.Social a {
+  cursor: pointer;
+  margin: auto 1rem;
+  text-decoration: none;
+  color: var(--MainText);
+}
+
+.Social a:hover {
+  color: var(--LightColor);
+}

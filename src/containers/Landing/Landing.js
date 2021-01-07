@@ -1,7 +1,30 @@
-import React from "react-router";
+import React, { useEffect, useState } from "react";
 
-const landing = (props) => {
-  return <div>This is the landing page</div>;
+import "./Landing.css";
+import Logo from "../../components/Logo/Logo";
+import ProjectList from "../../components/ProjectList/ProjectList";
+import ApiCalls from "../../utos/ApiCalls";
+
+const Landing = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    ApiCalls.getProjects().then((res) => {
+      const projectsToShow = res.data.projects
+        .reverse()
+        .filter((_, index) => index <= 2);
+      setProjects(projectsToShow);
+      console.log(projectsToShow);
+    });
+  }, []);
+
+  return (
+    <React.Fragment>
+      <div className="Background"></div>
+      <Logo />
+      <ProjectList projects={projects} />
+    </React.Fragment>
+  );
 };
 
-export default landing;
+export default Landing;

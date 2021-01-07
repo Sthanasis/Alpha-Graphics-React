@@ -1,10 +1,23 @@
 .Toolbar nav {
-  display: flex;
-  justify-content: space-around;
   height: 10vh;
+  z-index: 2;
   position: fixed;
   width: 100vw;
-  z-index: 2;
   align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Toolbar nav.Colored {
   background-color: var(--MediumColor);
+  transition: 0.5s;
+}
+
+.Toolbar nav.Transparent {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+main {
+  height: 100%;
 }
