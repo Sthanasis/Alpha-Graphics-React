@@ -1,13 +1,120 @@
+@font-face {
+  font-family: "Gilroy-Light";
+  src: local("Gilroy-Light"),
+    url(./assets/fonts/Gilroy-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"),
+    url(./assets/fonts/Gilroy-ExtraBold.otf) format("opentype");
+}
+
+:root {
+  --DarkColor: #1c2431;
+  --LightColor: #00c9ff;
+  --MediumColor: #273141;
+  --MainText: #ffffff;
+  --RedColor: #ff3e8d;
+  --fontSizeS: 1rem;
+  --fontSizeSM: 1.2rem;
+  --fontSizeM: 1.5rem;
+  --fontSizeML: 2rem;
+  --fontSizeL: 3rem;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Gilroy-Light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* ICONS */
+*[data-icon]:before {
+  font-size: var(--fontSizeML);
+}
+
+[data-icon="burger-menu"]:before {
+  content: "\00C5";
+  color: var(--MainText);
+}
+
+[data-icon="logo"]:before {
+  content: "\00C3";
+  font-size: var(--fontSizeL);
+  font-weight: normal;
+}
+
+[data-icon="landing"]:before {
+  content: "\00C4";
+  font-size: calc(var(--fontSizeL) * 6);
+}
+
+[data-icon="facebook"]:before {
+  content: "\00C0";
+}
+
+[data-icon="instagram"]:before {
+  content: "\00C1";
+}
+
+[data-icon="linkedin"]:before {
+  content: "\00C2";
+}
+
+[data-icon="border"]:before {
+  content: "|";
+}
+
+[data-icon="brash"]:before {
+  content: "\00A2";
+}
+
+[data-icon="phone"]:before {
+  content: "\00A1";
+}
+
+[data-icon="email"]:before {
+  content: "\00A3";
+}
+
+[data-icon="download"]:before {
+  content: "\00C6";
+}
+
+[data-icon="behance"]:before {
+  content: "\00C7";
+}
+
+/* ============  */
+
+/* @media (max-width: 1250px) {
+  :root {
+    --fontSizeS: 1rem;
+    --fontSizeSM: 1.2rem;
+    --fontSizeM: 1.5rem;
+    --fontSizeML: 2rem;
+    --fontSizeL: 3rem;
+  }
+
+
+  [data-icon="logo"]:before {
+    font-size: calc(var(--fontSizeL) * 2);
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --fontSizeS: 0.7rem;
+    --fontSizeSM: 0.8rem;
+    --fontSizeM: 1.2rem;
+    --fontSizeML: 1.5rem;
+    --fontSizeL: 2rem;
+  }
+} */

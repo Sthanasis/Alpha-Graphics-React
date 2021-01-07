@@ -1,0 +1,10 @@
+.Toolbar nav {
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  align-items: center;
+  background-color: var(--MediumColor);
+}

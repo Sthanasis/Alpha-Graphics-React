@@ -1,0 +1,18 @@
+.NavigationItem {
+  height: -webkit-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  margin: auto 1em;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.NavigationItem a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--MainText);
+}
+
+.NavigationItem a.active {
+  color: var(--LightColor);
+}
