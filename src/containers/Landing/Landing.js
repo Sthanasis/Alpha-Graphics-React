@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./Landing.css";
 import Logo from "../../components/Logo/Logo";
-import ProjectList from "../../components/ProjectList/ProjectList";
+import ProjectList from "./ProjectList/ProjectList";
 import ApiCalls from "../../utos/ApiCalls";
 
 const Landing = () => {

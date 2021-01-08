@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./LandingProject.css";
-import Button from "../Button/Button";
+import Button from "../../../components/UI/Button/Button";
 
 const landingProjectList = (props) => (
   <div className="LandingProject">
