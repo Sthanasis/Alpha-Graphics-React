@@ -1,0 +1,5 @@
+.Backdrop {
+  height: 100vh;
+  background-color: var(--DarkColor);
+  opacity: 0.5;
+}

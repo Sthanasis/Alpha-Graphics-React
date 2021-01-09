@@ -23,12 +23,17 @@
   --fontSizeL: 3rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Gilroy-Light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--DarkColor);
+  line-height: 1.5;
 }
 
 code {

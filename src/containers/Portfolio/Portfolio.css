@@ -1,0 +1,11 @@
+.Buttons-Container {
+  position: absolute;
+  top: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Buttons-Container button {
+  margin: 0 1em;
+}

@@ -1,0 +1,7 @@
+.form-container {
+  width: 50%;
+  background: var(--MediumColor);
+  padding: 1em;
+  box-shadow: 3px 6px 5px rgba(0, 0, 0, 0.8);
+  margin: 2em auto;
+}

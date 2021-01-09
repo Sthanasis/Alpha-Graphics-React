@@ -1,0 +1,36 @@
+.Input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.InputElement {
+  outline: none;
+  font: inherit;
+  padding: 6px 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.RadioInputContainer {
+  display: flex;
+  justify-content: center;
+  flex-flow: row-reverse;
+}
+
+.InputElement:focus {
+  outline: none;
+  box-shadow: 0px 0px 7px 1px var(--LightColor);
+}
+
+.Invalid {
+  border: 1px solid red;
+  background-color: salmon;
+}

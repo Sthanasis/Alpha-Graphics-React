@@ -4,14 +4,18 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Layout from "./hoc/Layout/Layout";
 import Landing from "./containers/Landing/Landing";
+import Portfolio from "./containers/Portfolio/Portfolio";
+import Contact from "./containers/Contact/Contact";
+import AddProject from "./containers/AddProject/AddProject";
 
-function App() {
+const App = () => {
   let routes = (
     <Switch>
       {/* <Route path="/about" component={} />
-      <Route path="/contact" component={BurgerBuilder} />
       <Route path="/portfolio" component={BurgerBuilder} /> */}
-      <Route path="/portfolio" component={Landing} />
+      <Route path="/addproject" component={AddProject} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/portfolio" component={Portfolio} />
       <Route path="/" component={Landing} />
       <Redirect to="/" />
     </Switch>
@@ -22,6 +26,6 @@ function App() {
       <Layout>{routes}</Layout>
     </div>
   );
-}
+};
 
 export default App;

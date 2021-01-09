@@ -7,10 +7,13 @@ const Logo = () => {
   const [fadeOutClass, setFadeOutClass] = useState("");
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setFadeInClass("Fade-in");
       setFadeOutClass("Fade-out");
     }, 2000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   return (

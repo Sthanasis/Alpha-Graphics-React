@@ -1,0 +1,37 @@
+.Project {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.Project img {
+  width: 20rem;
+}
+
+.details {
+  display: grid;
+  grid-template-rows: 2fr 2fr;
+  height: 20rem;
+  position: relative;
+  top: 0;
+  width: 20rem;
+  left: -20rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.5em;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.details:hover {
+  opacity: 1;
+}
+
+.details span {
+  margin: auto;
+  font-weight: 700;
+}
+
+.details button {
+  margin: auto;
+}

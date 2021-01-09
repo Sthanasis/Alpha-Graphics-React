@@ -4,6 +4,7 @@ import "./Button.css";
 
 const button = (props) => {
   let btnClass = "";
+  let selectedClass = "";
 
   switch (props.btnType) {
     case "Dark":
@@ -22,11 +23,13 @@ const button = (props) => {
       btnClass = "btn-default";
   }
 
+  if (props.selected) {
+    selectedClass = "selected";
+  }
   return (
     <button
-      className={`btn ${btnClass}`}
+      className={`btn ${btnClass} ${selectedClass}`}
       onClick={props.click}
-      selected={props.selected}
       disabled={props.disabled}
     >
       {props.children}

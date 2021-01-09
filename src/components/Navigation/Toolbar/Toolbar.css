@@ -9,7 +9,7 @@
 }
 
 .Toolbar nav.Colored {
-  background-color: var(--MediumColor);
+  background-color: var(--DarkColor);
   transition: 0.5s;
 }
 

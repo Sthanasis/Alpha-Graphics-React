@@ -11,7 +11,6 @@ const projectList = (props) => {
       )}
       {props.projects.map((project) => {
         let imgUrl = `${process.env.PUBLIC_URL}/img/${project.project}`;
-        console.log(imgUrl);
         return (
           <div
             className="project"

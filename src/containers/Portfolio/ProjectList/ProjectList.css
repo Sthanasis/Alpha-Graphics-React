@@ -1,0 +1,19 @@
+.Project-Container {
+  height: 20rem;
+  margin: auto;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+
+.Portfolio-Project-List {
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em 1em;
+  top: 30vh;
+  height: 70vh;
+  width: 98vw;
+  flex-wrap: wrap;
+}
