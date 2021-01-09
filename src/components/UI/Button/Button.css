@@ -57,3 +57,10 @@
   background-color: var(--LightColor);
   color: var(--DarkColor);
 }
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 5px;
+}

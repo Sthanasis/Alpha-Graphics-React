@@ -14,3 +14,9 @@ export const checkValidity = (value, rules) => {
 
   return isValid;
 };
+
+export const checkIsLoggedIn = () => {
+  return (
+    localStorage.getItem("token") && localStorage.getItem("userId") === "123"
+  );
+};

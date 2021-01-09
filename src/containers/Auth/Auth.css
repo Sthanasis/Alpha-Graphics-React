@@ -1,0 +1,10 @@
+.Login {
+  padding-top: 5rem;
+}
+
+.Login input,
+.Login button {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}

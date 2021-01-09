@@ -9,7 +9,9 @@ const navigationItems = (props) => {
       <NavigationItem link="/portfolio">Portfolio</NavigationItem>
       <NavigationItem link="/about">About</NavigationItem>
       <NavigationItem link="/contact">Contact</NavigationItem>
-      <NavigationItem link="/addproject">Add Project</NavigationItem>
+      {props.isAuth && (
+        <NavigationItem link="/addproject">Add Project</NavigationItem>
+      )}
     </ul>
   );
 };

@@ -47,19 +47,18 @@ class ApiCalls {
 
   //Create
   static async insertProject(data) {
-    console.log(data);
-    // try {
-    //   const res = await axios({
-    //     method: "POST",
-    //     url: `${url}`,
-    //     data,
-    //   });
-    //   if (res.data.status === "success") {
-    //     return res;
-    //   }
-    // } catch (err) {
-    //   alert(err);
-    // }
+    try {
+      const res = await axios({
+        method: "POST",
+        url: `${url}`,
+        data,
+      });
+      if (res.data.status === "success") {
+        return res;
+      }
+    } catch (err) {
+      alert(err);
+    }
   }
 
   //Delete
@@ -81,16 +80,16 @@ class ApiCalls {
     try {
       const res = await axios({
         method: "POST",
-        url: `${url}/login`,
+        url: `${url}login`,
         data: user,
       });
       if (res.data.status === "success") {
         localStorage.setItem("token", res.data.token);
-
+        localStorage.setItem("userId", res.data.data.user.id);
         return res;
       }
     } catch (err) {
-      alert(err);
+      console.log(err);
     }
   }
 
