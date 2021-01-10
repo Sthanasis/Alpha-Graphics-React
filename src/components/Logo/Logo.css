@@ -201,3 +201,22 @@
     left: 50%;
   }
 }
+
+@media (max-width: 1250px) {
+  .center {
+    top: 40%;
+  }
+}
+
+@media (max-width: 992px) {
+  .Logo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .LogoFooter {
+    margin-left: 0;
+    position: relative;
+    text-align: end;
+  }
+}

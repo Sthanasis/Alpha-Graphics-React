@@ -18,9 +18,22 @@
   transition: 0.5s;
 }
 
-@media (max-width: 991px) {
+.Toolbar .pageIndicator {
+  display: none;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin: auto 25% auto 0;
+  font-family: Gilroy-Bold;
+  font-size: var(--fontSizeML);
+}
+
+@media (max-width: 1250px) {
   .Toolbar .NavigationItems,
   .Toolbar .Social {
     display: none;
+  }
+
+  .Toolbar .pageIndicator {
+    display: block;
   }
 }

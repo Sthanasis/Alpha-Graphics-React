@@ -91,3 +91,32 @@
   text-transform: uppercase;
   color: var(--DarkColor);
 }
+
+@media (max-width: 768px) {
+  .Grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.7fr 1fr 1fr;
+    margin-top: 10vh;
+    grid-template-areas:
+      "artistPhoto"
+      "header"
+      "description"
+      "text"
+      "download";
+  }
+
+  .artistPhoto img,
+  .widthFitContent,
+  .download button {
+    margin: 0 auto;
+  }
+
+  .text {
+    margin: auto;
+    font-size: var(--fontSizeSM);
+  }
+
+  .download button {
+    margin-right: 0.5em;
+  }
+}

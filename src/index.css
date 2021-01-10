@@ -108,9 +108,7 @@ code {
   width: fit-content;
 }
 
-/* ============  */
-
-/* @media (max-width: 1250px) {
+@media (max-width: 1250px) {
   :root {
     --fontSizeS: 1rem;
     --fontSizeSM: 1.2rem;
@@ -118,7 +116,6 @@ code {
     --fontSizeML: 2rem;
     --fontSizeL: 3rem;
   }
-
 
   [data-icon="logo"]:before {
     font-size: calc(var(--fontSizeL) * 2);
@@ -133,4 +130,4 @@ code {
     --fontSizeML: 1.5rem;
     --fontSizeL: 2rem;
   }
-} */
+}

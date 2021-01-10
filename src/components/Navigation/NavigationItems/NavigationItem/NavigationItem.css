@@ -16,3 +16,9 @@
 .NavigationItem a.active {
   color: var(--LightColor);
 }
+
+@media (max-width: 1250px) {
+  .NavigationItem a {
+    font-size: var(--fontSizeML);
+  }
+}

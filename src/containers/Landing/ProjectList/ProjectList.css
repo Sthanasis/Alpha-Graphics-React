@@ -18,3 +18,11 @@
 .project:nth-of-type(2) {
   background-position-x: 50vw;
 }
+
+@media (max-width: 1250px) {
+  .project {
+    background-position-x: 0 !important;
+    background-position-y: 20vh;
+    background-size: 100vw;
+  }
+}

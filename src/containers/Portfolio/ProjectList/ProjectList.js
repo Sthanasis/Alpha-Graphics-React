@@ -4,6 +4,7 @@ import PortfolioProject from "../PortfolioProject/PortfolioProject";
 import Project from "../../../components/Project/Project";
 import "./ProjectList.css";
 import apiCalls from "../../../utos/ApiCalls";
+import Loader from "../../../components/UI/Loader/Loader";
 
 const PortfolioProjectList = (props) => {
   const [projects, setProjects] = useState([]);
@@ -17,9 +18,11 @@ const PortfolioProjectList = (props) => {
         .then((res) => {
           const displayProjects = [...res.data.projects].reverse();
           setProjects(displayProjects);
+          props.stopLoading();
         })
         .catch((err) => {
           console.log(err);
+          props.stopLoading();
         });
     } else if (props.mode === "GraphicDesign") {
       apiCalls
@@ -28,9 +31,11 @@ const PortfolioProjectList = (props) => {
         .then((res) => {
           const displayProjects = [...res.data.projects].reverse();
           setProjects(displayProjects);
+          props.stopLoading();
         })
         .catch((err) => {
           console.log(err);
+          props.stopLoading();
         });
     }
   }, [props]);
@@ -67,21 +72,25 @@ const PortfolioProjectList = (props) => {
       });
   };
 
+  const projectsToShow = props.loading ? (
+    <Loader />
+  ) : (
+    projects.map((project) => (
+      <div className="Project-Container" key={project._id}>
+        <PortfolioProject
+          isAuth={props.isAuth}
+          title={project.title}
+          img={project.project}
+          showProject={() => getProjectFromDBHandler(project._id)}
+          deleteProject={() => deleteProjectHandler(project._id)}
+        />
+      </div>
+    ))
+  );
+
   return (
     <React.Fragment>
-      <div className="Portfolio-Project-List">
-        {projects.map((project) => (
-          <div className="Project-Container" key={project._id}>
-            <PortfolioProject
-              isAuth={props.isAuth}
-              title={project.title}
-              img={project.project}
-              showProject={() => getProjectFromDBHandler(project._id)}
-              deleteProject={() => deleteProjectHandler(project._id)}
-            />
-          </div>
-        ))}
-      </div>
+      <div className="Portfolio-Project-List">{projectsToShow}</div>
       {project && <Project {...project} closeProject={closeProjectHandler} />}
     </React.Fragment>
   );

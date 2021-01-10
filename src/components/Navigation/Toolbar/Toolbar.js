@@ -49,6 +49,7 @@ const Toolbar = (props) => {
     <header className="Toolbar">
       <nav className={activeClass}>
         <ToggleDrawer clicked={props.drawerToggleClicked} />
+        <div className="pageIndicator">{props.page}</div>
         <NavigationItems isAuth={isAuth} />
         <Social />
         {button}

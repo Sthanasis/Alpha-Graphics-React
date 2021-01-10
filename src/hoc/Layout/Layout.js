@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import "./Layout.css";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
@@ -6,6 +7,8 @@ import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 
 const Layout = (props) => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
+  const pageIndicator = useLocation().pathname.split("/").join("");
+
   const sideDrawerClosedHandler = () => {
     setShowSideDrawer(false);
   };
@@ -19,6 +22,7 @@ const Layout = (props) => {
       <Toolbar
         isAuth={props.isAuth}
         setAuth={props.setAuth}
+        page={pageIndicator}
         drawerToggleClicked={sideDrawerToggleHandler}
       />
       <SideDrawer

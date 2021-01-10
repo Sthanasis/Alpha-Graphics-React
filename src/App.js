@@ -12,9 +12,9 @@ import About from "./containers/About/About";
 import { checkIsLoggedIn } from "./utos/utility";
 import apiCalls from "./utos/ApiCalls";
 
-const App = () => {
+const App = (props) => {
   const [isLoggedIn, setIsLoggedIn] = useState(checkIsLoggedIn());
-
+  console.log(props, "App.js");
   const loginHandler = (data) => {
     if (data.username.trim() === "" || data.password.trim() === "") {
       alert("Type in both username and password");

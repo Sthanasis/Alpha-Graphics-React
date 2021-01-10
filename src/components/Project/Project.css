@@ -1,19 +1,19 @@
-.Project .titleContainer {
+.ViewedProject .titleContainer {
   margin: auto;
 }
 
-.Project .title {
+.ViewedProject .title {
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: var(--fontSizeSM);
 }
 
-.Project .projectDescription {
+.ViewedProject .projectDescription {
   margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
-.Project .imgContainer {
+.ViewedProject .imgContainer {
   height: 100vh;
   width: 100vw;
   border-radius: 5px;
@@ -25,12 +25,19 @@
   margin-top: 10vh;
 }
 
-.Project .imgContainer img {
+.ViewedProject .imgContainer img {
   width: 60vw;
 }
 
-.Project .date {
+.ViewedProject .date {
   text-align: center;
   margin-top: 1rem;
   font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .ViewedProject .imgContainer {
+    position: fixed;
+    padding: 1em;
+  }
 }

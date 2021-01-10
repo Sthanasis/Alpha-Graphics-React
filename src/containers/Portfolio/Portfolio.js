@@ -6,7 +6,12 @@ import Button from "../../components/UI/Button/Button";
 import ProjectList from "./ProjectList/ProjectList";
 
 const Portfolio = (props) => {
-  const [mode, setMode] = useState("");
+  const [mode, setMode] = useState(sessionStorage.getItem("mode"));
+  const [loading, setLoading] = useState(true);
+
+  const stopLoadingHandler = () => {
+    setLoading(false);
+  };
 
   useEffect(() => {
     if (!sessionStorage.getItem("mode")) {
@@ -15,6 +20,7 @@ const Portfolio = (props) => {
     } else {
       setMode(sessionStorage.getItem("mode"));
     }
+    setLoading(true);
   }, [mode]);
 
   const setModeToConceptArtHandler = () => {
@@ -46,7 +52,12 @@ const Portfolio = (props) => {
           Concept Art
         </Button>
       </div>
-      <ProjectList isAuth={props.isAuth} mode={mode} />
+      <ProjectList
+        loading={loading}
+        stopLoading={stopLoadingHandler}
+        isAuth={props.isAuth}
+        mode={mode}
+      />
     </React.Fragment>
   );
 };

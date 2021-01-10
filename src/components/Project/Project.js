@@ -13,7 +13,7 @@ const project = (props) => {
     }
   };
   return (
-    <div className="Project">
+    <div className="ViewedProject">
       <Outline close={props.closeProject} />
       <div className="imgContainer center">
         <div className="titleContainer widthFitContent">

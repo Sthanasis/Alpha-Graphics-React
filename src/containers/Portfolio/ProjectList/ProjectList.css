@@ -17,3 +17,22 @@
   width: 98vw;
   flex-wrap: wrap;
 }
+
+@media (max-width: 1250px) {
+  .Portfolio-Project-List {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .Portfolio-Project-List {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 2vh;
+  }
+
+  .Project-Container {
+    margin: 1em auto;
+  }
+}
