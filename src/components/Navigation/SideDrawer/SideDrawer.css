@@ -1,0 +1,29 @@
+.SideDrawer {
+  height: 90vh;
+  background-color: var(--DarkColor);
+  top: 10vh;
+  position: fixed;
+  z-index: 5;
+}
+
+.SideDrawer nav .NavigationItems {
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 70vh;
+  padding: 0;
+}
+
+@media (min-width: 991px) {
+  .SideDrawer {
+    display: none;
+  }
+}
+
+.Open {
+  transform: translateX(0);
+}
+
+.Closed {
+  transform: translateX(-100%);
+}

@@ -8,6 +8,7 @@ import Portfolio from "./containers/Portfolio/Portfolio";
 import Contact from "./containers/Contact/Contact";
 import AddProject from "./containers/AddProject/AddProject";
 import Auth from "./containers/Auth/Auth";
+import About from "./containers/About/About";
 import { checkIsLoggedIn } from "./utos/utility";
 import apiCalls from "./utos/ApiCalls";
 
@@ -34,16 +35,28 @@ const App = () => {
 
   let routes = (
     <Switch>
-      {/* <Route path="/about" component={} />
-       */}
+      <Route
+        path="/about"
+        component={(props) => <About {...props} isAuth={isLoggedIn}></About>}
+      />
       <Route
         path="/login"
         component={(props) => <Auth {...props} setAuth={loginHandler}></Auth>}
       />
       {isLoggedIn && <Route path="/addproject" component={AddProject} />}
       <Route path="/contact" component={Contact} />
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/" component={Landing} />
+      <Route
+        path="/portfolio"
+        component={(props) => (
+          <Portfolio {...props} isAuth={isLoggedIn}></Portfolio>
+        )}
+      />
+      <Route
+        path="/"
+        component={(props) => (
+          <Landing {...props} isAuth={isLoggedIn}></Landing>
+        )}
+      />
       <Redirect to="/" />
     </Switch>
   );

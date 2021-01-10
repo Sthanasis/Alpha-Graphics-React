@@ -1,0 +1,93 @@
+.Grid {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  font-family: "Gilroy-Bold";
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  margin-top: 20vh;
+  grid-template-areas:
+    "artistPhoto header"
+    "artistPhoto description"
+    ". text"
+    ". download";
+}
+
+.Grid .alignLeft {
+  text-align: left;
+}
+
+.artistPhoto {
+  grid-area: artistPhoto;
+  display: flex;
+}
+
+.artistPhoto img {
+  width: calc(var(--fontSizeL) * 5);
+  margin-left: auto;
+}
+
+.header {
+  grid-area: header;
+  padding: 1em 0;
+  letter-spacing: 1px;
+}
+
+.header div {
+  background-color: var(--RedColor);
+  padding: 0.5em 1em;
+}
+
+.header div h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.artistName .name span {
+  font-weight: 700;
+  color: var(--DarkColor);
+  font-size: calc(var(--fontSizeM));
+}
+
+.artistName {
+  grid-area: description;
+  background-color: var(--LightColor);
+  height: -webkit-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  padding: 0.5em 1em;
+}
+.text {
+  grid-area: text;
+  padding-left: 0.5em;
+}
+
+.download {
+  grid-area: download;
+  padding: 0.5em;
+  display: flex;
+  height: -webkit-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  margin-top: 2em;
+}
+
+.artistDescription {
+  color: var(--DarkColor);
+  font-family: "Gilroy-Light";
+}
+
+.downloadDescription {
+  margin: auto;
+  height: -webkit-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  color: var(--DarkColor);
+}

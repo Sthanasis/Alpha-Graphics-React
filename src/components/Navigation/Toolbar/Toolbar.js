@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Toolbar.css";
 // import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
-// import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
+import ToggleDrawer from "../SideDrawer/ToggleDrawer/ToggleDrawer";
 import Social from "../Social/Social";
 import Button from "../../UI/Button/Button";
 
@@ -48,6 +48,7 @@ const Toolbar = (props) => {
   return (
     <header className="Toolbar">
       <nav className={activeClass}>
+        <ToggleDrawer clicked={props.drawerToggleClicked} />
         <NavigationItems isAuth={isAuth} />
         <Social />
         {button}

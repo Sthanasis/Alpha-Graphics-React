@@ -13,11 +13,14 @@ const button = (props) => {
     case "Medium":
       btnClass = "btn-medium";
       break;
-    case "DownLoad":
+    case "Download":
       btnClass = "btn-download";
       break;
     case "Danger":
       btnClass = "btn-danger";
+      break;
+    case "Success":
+      btnClass = "btn-success";
       break;
     default:
       btnClass = "btn-default";
@@ -31,6 +34,7 @@ const button = (props) => {
       className={`btn ${btnClass} ${selectedClass}`}
       onClick={props.click}
       disabled={props.disabled}
+      data-icon={props.icon}
     >
       {props.children}
     </button>

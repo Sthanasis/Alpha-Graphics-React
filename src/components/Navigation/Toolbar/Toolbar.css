@@ -18,6 +18,9 @@
   transition: 0.5s;
 }
 
-main {
-  height: 100%;
+@media (max-width: 991px) {
+  .Toolbar .NavigationItems,
+  .Toolbar .Social {
+    display: none;
+  }
 }

@@ -3,11 +3,9 @@ import React, { useEffect, useState } from "react";
 import "./Portfolio.css";
 import Backdrop from "../../components/UI/Backdrop/Backdrop";
 import Button from "../../components/UI/Button/Button";
-import apiCalls from "../../utos/ApiCalls";
 import ProjectList from "./ProjectList/ProjectList";
 
-const Portfolio = () => {
-  const [projects, setProjects] = useState([]);
+const Portfolio = (props) => {
   const [mode, setMode] = useState("");
 
   useEffect(() => {
@@ -16,30 +14,6 @@ const Portfolio = () => {
       sessionStorage.setItem("mode", "GraphicDesign");
     } else {
       setMode(sessionStorage.getItem("mode"));
-    }
-
-    if (mode === "ConceptArt") {
-      apiCalls
-        .getConceptArtProjects()
-        .then((res) => res.data)
-        .then((res) => {
-          const displayProjects = [...res.data.projects].reverse();
-          setProjects(displayProjects);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else if (mode === "GraphicDesign") {
-      apiCalls
-        .getGraphicDesignProjects()
-        .then((res) => res.data)
-        .then((res) => {
-          const displayProjects = [...res.data.projects].reverse();
-          setProjects(displayProjects);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
     }
   }, [mode]);
 
@@ -72,7 +46,7 @@ const Portfolio = () => {
           Concept Art
         </Button>
       </div>
-      <ProjectList projects={projects} />
+      <ProjectList isAuth={props.isAuth} mode={mode} />
     </React.Fragment>
   );
 };

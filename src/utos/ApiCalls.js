@@ -66,7 +66,22 @@ class ApiCalls {
     try {
       const res = await axios({
         method: "DELETE",
-        url: `${url}/${id}`,
+        url: `${url}${id}`,
+      });
+      if (res.data.status === "success") {
+        console.log(res);
+        return res;
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  static async getProject(id) {
+    try {
+      const res = await axios({
+        method: "GET",
+        url: `${url}${id}`,
       });
       if (res.data.status === "success") {
         return res;
@@ -105,6 +120,32 @@ class ApiCalls {
       }
     } catch (err) {
       console.log(err);
+    }
+  }
+
+  static async getCV() {
+    try {
+      const res = await axios({
+        method: "GET",
+        url: `${url}file/cv`,
+        responseType: "blob",
+      });
+      return res;
+    } catch (err) {
+      alert(err);
+    }
+  }
+
+  static async postCV(data) {
+    try {
+      const res = await axios({
+        method: "POST",
+        url: `${url}cv`,
+        data,
+      });
+      return res;
+    } catch (err) {
+      alert(err);
     }
   }
 }

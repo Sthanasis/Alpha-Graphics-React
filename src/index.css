@@ -36,6 +36,10 @@ body {
   line-height: 1.5;
 }
 
+.locked {
+  overflow-y: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -96,6 +100,12 @@ code {
 
 [data-icon="behance"]:before {
   content: "\00C7";
+}
+
+.widthFitContent {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 /* ============  */

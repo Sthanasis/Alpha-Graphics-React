@@ -48,7 +48,7 @@
   font-family: "Gilroy-Bold";
 }
 
-.name {
+.ArtistName .name {
   font-size: var(--fontSizeL);
 }
 
