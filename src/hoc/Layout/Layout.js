@@ -27,6 +27,7 @@ const Layout = (props) => {
       />
       <SideDrawer
         isAuth={props.isAuth}
+        setAuth={props.setAuth}
         open={showSideDrawer}
         closed={sideDrawerClosedHandler}
       />

@@ -29,7 +29,8 @@
 
 @media (max-width: 1250px) {
   .Toolbar .NavigationItems,
-  .Toolbar .Social {
+  .Toolbar .Social,
+  .logoutButton {
     display: none;
   }
 

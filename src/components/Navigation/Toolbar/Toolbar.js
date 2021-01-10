@@ -37,7 +37,7 @@ const Toolbar = (props) => {
   let button = null;
   if (isAuth) {
     button = (
-      <div>
+      <div className="logoutButton">
         <Button btnType="Danger" click={props.setAuth}>
           Logout
         </Button>

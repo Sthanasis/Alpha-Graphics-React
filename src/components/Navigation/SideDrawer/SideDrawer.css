@@ -18,6 +18,10 @@
   .SideDrawer {
     display: none;
   }
+
+  .logoutMobileButton {
+    display: none;
+  }
 }
 
 .Open {
